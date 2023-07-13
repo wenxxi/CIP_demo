@@ -1,0 +1,24 @@
+<config>
+    <input>
+        <jar in="testAPI-0.0.1-SNAPSHOT.jar" out="obfuscate_testAPI.jar"/>
+    </input>
+    
+    <property name="skip-renaming" value="enable"/>
+    <property name="local-variables-naming" value="keep"/>
+    
+    <ignore-classes>
+        <class template="class *springframework*" />
+    </ignore-classes>
+
+    <keep-names>
+        <class template="class *.ObfuscationDemoApplication" />
+        <class access="protected+">
+            <field access="protected+"/>
+            <method access="protected+"/>
+        </class>
+    </keep-names>
+
+    <property name="log-file" value="log.xml"/>
+    <!-- <property name="control-flow-obfuscation" value="enable"/>
+    <watermark key="secure-key-to-extract-watermark" value="Customer: John Smith"/> -->
+</config>
