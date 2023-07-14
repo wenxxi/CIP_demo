@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigUtils {
 
-    private static final String CONFIG_FILE_PATH = "~/CIP_demo/shared-config.properties";
+    private static final String CONFIG_FILE_PATH = "/Users/wenxi/CIP_demo/shared-config.properties";
 
 //    public static String getIP() {
 //        Properties properties = loadProperties();

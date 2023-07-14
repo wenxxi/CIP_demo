@@ -5,16 +5,15 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class GetIPController {
-    @GetMapping("/inputip")
-    public String InputIPform(@ModelAttribute InputIP ipinput){
-        ipinput.IPaddress
-        return "inputip";
+    @GetMapping("/input")
+    public String InputIPform(@ModelAttribute("ip") IP x){
+        return "input";
     }
 
-    @PostMapping("/inputip")
-    public String InputSave(@ModelAttribute InputIP ipinput) {
-        ConfigUtils.saveIP(ipinput.getIP());
-        return "inputip";
+    @PostMapping("/input")
+    public String InputSave(@ModelAttribute("ip") IP ip) {
+        ConfigUtils.saveIP(ip.getip());
+        return "success";
     }
 
 }

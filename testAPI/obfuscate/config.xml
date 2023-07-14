@@ -1,0 +1,22 @@
+<config>
+    <input>
+        <jar in="testAPI-0.0.1-SNAPSHOT.jar" out="obfuscate_testAPI.jar"/>
+    </input>
+
+    <ignore-classes>
+        <class template="class *springframework*" />
+        <class template="class com.example.testapi.User" />
+    </ignore-classes>
+
+    <keep-names>
+        <class template="class *.ObfuscationDemoApplication" />
+        <class access="protected+">
+            <field access="protected+"/>
+            <method access="protected+"/>
+        </class>
+    </keep-names>
+
+    <property name="log-file" value="log.xml"/>
+    <!-- <property name="control-flow-obfuscation" value="enable"/>
+    <watermark key="secure-key-to-extract-watermark" value="Customer: John Smith"/> -->
+</config>
